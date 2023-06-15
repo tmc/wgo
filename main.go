@@ -27,7 +27,7 @@ const helptext = `Usage:
 
 Pass in the -h flag to the wgo/wgo run to learn what flags there are i.e. wgo -h, wgo run -h
 
-Core documentation resides at https://github.com/bokwoon95/wgo#quickstart
+Core documentation resides at https://github.com/tmc/wgo#quickstart
 `
 
 func main() {

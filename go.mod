@@ -1,4 +1,4 @@
-module github.com/bokwoon95/wgo
+module github.com/tmc/wgo
 
 go 1.16
 

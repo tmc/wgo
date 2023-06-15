@@ -1,6 +1,6 @@
-[![tests](https://github.com/bokwoon95/sq/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/bokwoon95/wgo/actions)
-[![Go Report Card](https://goreportcard.com/badge/github.com/bokwoon95/wgo)](https://goreportcard.com/report/github.com/bokwoon95/wgo)
-[![Coverage Status](https://shields.io/coverallsCoverage/github/bokwoon95/wgo?branch=main)](https://coveralls.io/github/bokwoon95/wgo?branch=main)
+[![tests](https://github.com/tmc/sq/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/tmc/wgo/actions)
+[![Go Report Card](https://goreportcard.com/badge/github.com/tmc/wgo)](https://goreportcard.com/report/github.com/tmc/wgo)
+[![Coverage Status](https://shields.io/coverallsCoverage/github/tmc/wgo?branch=main)](https://coveralls.io/github/tmc/wgo?branch=main)
 
 <div align="center"><h1>wgo – watcher-go</h1></div>
 <div align="center"><h4>Live reload for Go apps (and more)</h4></div>
@@ -9,7 +9,7 @@
 ## Installation
 
 ```shell
-go install github.com/bokwoon95/wgo@latest
+$ go install github.com/tmc/wgo@latest
 ```
 
 ```text
@@ -28,7 +28,7 @@ Usage:
 
 Pass in the -h flag to the wgo/wgo run to learn what flags there are i.e. wgo -h, wgo run -h
 
-Core documentation resides at https://github.com/bokwoon95/wgo#quickstart
+Core documentation resides at https://github.com/tmc/wgo#quickstart
 ```
 
 ## Why this exists
@@ -310,4 +310,4 @@ Nothing! File watchers honestly all do the same things, if you find a file watch
 
 ## Contributing
 
-See [START\_HERE.md](https://github.com/bokwoon95/wgo/blob/main/START_HERE.md).
+See [START\_HERE.md](https://github.com/tmc/wgo/blob/main/START_HERE.md).
