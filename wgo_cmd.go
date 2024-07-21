@@ -230,7 +230,9 @@ Flags:
 	// If the command is `wgo run`, also parse the go build flags.
 	var strFlagValues []string
 	var boolFlagValues []bool
+	var preExecCmd string
 	if wgoCmd.isRun {
+		flagset.StringVar(&preExecCmd, "pre-exec", "", "if provided, will run before the just-built binary")
 		strFlagValues = make([]string, 0, len(strFlagNames))
 		for i := range strFlagNames {
 			name := strFlagNames[i]
@@ -299,7 +301,17 @@ Flags:
 		}
 		buildArgs = append(buildArgs, flagArgs[0])
 		runArgs := []string{wgoCmd.binPath}
-		wgoCmd.ArgsList = [][]string{buildArgs, runArgs}
+		wgoCmd.ArgsList = [][]string{buildArgs}
+		// if we have a preExec, run it before runArgs
+		if preExecCmd != "" {
+			cmd := preExecCmd
+			if strings.Contains(preExecCmd, `%s`) {
+				cmd = fmt.Sprintf(preExecCmd, wgoCmd.binPath)
+			}
+			preExecCmdArgs := strings.Split(cmd, " ")
+			wgoCmd.ArgsList = append(wgoCmd.ArgsList, preExecCmdArgs)
+		}
+		wgoCmd.ArgsList = append(wgoCmd.ArgsList, runArgs)
 		flagArgs = flagArgs[1:]
 	}
 
