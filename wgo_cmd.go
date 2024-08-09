@@ -310,6 +310,7 @@ Flags:
 			}
 			preExecCmdArgs := strings.Split(cmd, " ")
 			wgoCmd.ArgsList = append(wgoCmd.ArgsList, preExecCmdArgs)
+			wgoCmd.:
 		}
 		wgoCmd.ArgsList = append(wgoCmd.ArgsList, runArgs)
 		flagArgs = flagArgs[1:]
