@@ -8,6 +8,8 @@
 
 ## Installation
 
+You can [download](#download-the-latest-release) binaries from [the release page](https://github.com/tmc/wgo/releases/latest), or use the Go command:
+
 ```shell
 $ go install github.com/tmc/wgo@latest
 ```
@@ -33,7 +35,7 @@ Core documentation resides at https://github.com/tmc/wgo#quickstart
 
 ## Why this exists
 
-Too many file watchers either force you to wrap your commands into strings, require config files or log tons of noisy output to your stdout. In contrast, `wgo` is [dead simple](#quickstart) and silent by default. The implementation is also really short, most of it resides in just two files ([wgo\_cmd.go](https://github.com/bokwoon95/wgo/blob/main/wgo_cmd.go) and [main.go](https://github.com/bokwoon95/wgo/blob/main/main.go)). You can read the entire codebase in one sitting, [start here](https://github.com/bokwoon95/wgo/blob/main/START_HERE.md).
+Too many file watchers either force you to wrap your commands into strings, require config files or log tons of noisy output to your stdout. In contrast, `wgo` is [dead simple](#quickstart) and silent by default. The implementation is also really short, most of it resides in just two files ([wgo\_cmd.go](https://github.com/tmc/wgo/blob/main/wgo_cmd.go) and [main.go](https://github.com/tmc/wgo/blob/main/main.go)). You can read the entire codebase in one sitting, [start here](https://github.com/tmc/wgo/blob/main/START_HERE.md).
 
 It can be used like [`go run`](#wgo-run).
 
@@ -275,7 +277,7 @@ If the -verbose flag is provided, file events are logged.
 Without -verbose:
 
 ```shell
-$ wgo run -verbose ./server
+$ wgo run ./server
 Listening on localhost:8080
 Listening on localhost:8080 # <-- file edited.
 ```
@@ -311,3 +313,47 @@ Nothing! File watchers honestly all do the same things, if you find a file watch
 ## Contributing
 
 See [START\_HERE.md](https://github.com/tmc/wgo/blob/main/START_HERE.md).
+
+## Download the latest release
+
+[Release page](https://github.com/tmc/wgo/releases/latest)
+
+### Linux
+
+[https://github.com/tmc/wgo/releases/latest/download/wgo-linux](https://github.com/tmc/wgo/releases/latest/download/wgo-linux)
+
+```shell
+curl --location --output wgo 'https://github.com/tmc/wgo/releases/latest/download/wgo-linux'
+```
+
+### Linux (ARM)
+
+[https://github.com/tmc/wgo/releases/latest/download/wgo-linux-arm](https://github.com/tmc/wgo/releases/latest/download/wgo-linux-arm)
+
+```shell
+curl --location --output wgo "https://github.com/tmc/wgo/releases/latest/download/wgo-linux-arm"
+```
+
+### macOS
+
+[https://github.com/tmc/wgo/releases/latest/download/wgo-macos](https://github.com/tmc/wgo/releases/latest/download/wgo-macos)
+
+```shell
+curl --location --output wgo "https://github.com/tmc/wgo/releases/latest/download/wgo-macos"
+```
+
+### macOS (Apple Silicon)
+
+[https://github.com/tmc/wgo/releases/latest/download/wgo-macos-apple-silicon](https://github.com/tmc/wgo/releases/latest/download/wgo-macos-apple-silicon)
+
+```shell
+curl --location --output wgo "https://github.com/tmc/wgo/releases/latest/download/wgo-macos-apple-silicon"
+```
+
+### Windows
+
+[https://github.com/tmc/wgo/releases/latest/download/wgo-windows.exe](https://github.com/tmc/wgo/releases/latest/download/wgo-windows.exe)
+
+```bat
+curl --location --output wgo.exe "https://github.com/tmc/wgo/releases/latest/download/wgo-windows.exe"
+```
